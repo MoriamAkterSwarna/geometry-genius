@@ -127,3 +127,14 @@ function getAllData(e) {
   
     return shape;
   }
+
+  const randomColors = document.getElementsByClassName("random-color");
+  for(const randomColor of randomColors){
+    randomColor.addEventListener('mouseout', function(){
+
+        let hex = '#' + Math.floor(Math.random()*16777215).toString(16);
+        randomColor.style.backgroundColor = hex;
+      });
+    
+  }
+  
